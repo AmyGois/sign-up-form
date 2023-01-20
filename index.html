@@ -8,6 +8,57 @@
     <link rel="stylesheet" href="./styles.css">
 </head>
 <body>
-    
+    <header>
+        <div>
+            <img src="./images/coffee-cup.png" alt="cafe logo">
+            <h1>The Coffee Café</h1>
+        </div>
+        <p>Image by <a href="https://pixabay.com/pt/users/analogicus-8164369/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=3537801">Tom</a> on <a href="https://pixabay.com/pt//?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=3537801">Pixabay</a></p>
+    </header>
+
+    <main>
+        <p>Do you love a good brew of coffee and a chat first thing in the morning? Are your local cafés all closed? Then join the Coffee Café, the world's first virtual reality café!</p>
+        <p>Tea-lovers are welcome, too!</p>
+
+        <form action="./index.html" method="post">
+            <fieldset>
+                <legend>Fill in the form to join our virtual reality café</legend>
+
+                <div>
+                    <label for="user-full-name">Full name
+                        <input type="text" id="user-full-name" name="user-full-name" required>
+                    </label>
+
+                    <label for="user-name">What would you like us to call you?
+                        <input type="text" id="user-name" name="user-name" required>
+                    </label>
+                </div>
+
+                <div>
+                    <label for="user-email">Email
+                        <input type="email" id="user-email" name="user-email" required>
+                    </label>
+
+                    <label for="user-phone">Phone number (optional)
+                        <input type="tel" id="user-phone" name="user-phone">
+                    </label>
+                </div>
+
+                <div>
+                    <label for="user-password">Password
+                        <input type="password" id="user-password" name="user-password" required>
+                    </label>
+
+                    <label for="user-password-confirm">Confirm password
+                        <input type="password" id="user-password-confirm" name="user-password-confirm" required>
+                    </label>
+                </div>
+            </fieldset>
+
+            <button>Make café account</button>
+        </form>
+
+        <p>Already a regular? <a href="#">Log in</a></p>
+    </main>
 </body>
 </html>
