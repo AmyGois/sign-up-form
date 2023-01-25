@@ -5,6 +5,12 @@
 body {
     min-height: 100vh;
     margin: 0;
+    
+    background-color: #f4f4f4;
+}
+
+body, input, button {
+    font-family: 'Open Sans', sans-serif;
 }
 
 /* Main flexbox structure */
@@ -17,6 +23,12 @@ body, .header-title, .form-row {
 main, header, label {
     display: flex;
     flex-direction: column;
+}
+
+.form-row {
+    flex-wrap: wrap;
+    column-gap: 60px;
+    row-gap: 20px;
 }
 
 /* Header */
@@ -32,13 +44,24 @@ header {
 }
 
 .header-title {
-    align-items: center;
+    align-items: flex-end;
+    justify-content: center;
     gap: 10px;
+    width: 100%;
+    background-color: rgba(217, 255, 250, 0.85);
+    padding-bottom: 12px;
 }
 
 .header-logo {
     width: 50px;
     height: 58px;
+    margin: 8px;
+}
+
+h1 {
+    margin: 0;
+    font-family: 'Merienda', cursive;
+    font-size: 2.2rem;
 }
 
 /* Main */
@@ -49,10 +72,40 @@ main {
 }
 
 main > p, form {
-    padding: 0 calc(20vw - 30px) 0 30px;
+    padding: 0 calc(20vw - 30px) 0 40px;
+    margin: 0 0 20px 0;
+}
+
+form {
+    background-color: #fff;
+    box-shadow: 0 5px 5px #bbb;
 }
 
 fieldset {
     border: none;
+    margin: 20px 0 0 0;
     padding: 0;
+}
+
+legend, .form-row, button {
+    margin-bottom: 20px;
+}
+
+main > p, legend {
+    font-size: 1.2rem;
+}
+
+label, input, form ~ p {
+    font-size: 0.9rem;
+    font-weight: 300;
+}
+
+label {
+    color: #333;
+}
+
+button {
+    font-size: 0.9rem;
+    font-weight: 600;
+    padding: 0.45rem 1.8rem;
 }
