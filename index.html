@@ -29,33 +29,45 @@
                 <legend>Fill in the form to join our virtual reality café</legend>
 
                 <div class="form-row">
-                    <label for="user-full-name">Full name
-                        <input type="text" id="user-full-name" name="user-full-name" required>
-                    </label>
-
-                    <label for="user-name">What would you like us to call you?
-                        <input type="text" id="user-name" name="user-name" required>
-                    </label>
+                    <div class="form-input">
+                        <label for="user-full-name">Full name</label>
+                        <input type="text" id="user-full-name" name="user-full-name" placeholder=" " required>
+                        <span class="form-input-errormsg">x Please enter a valid name</span>
+                    </div>
+                    
+                    <div class="form-input">
+                        <label for="user-name">Name on your coffee cup</label>
+                        <input type="text" id="user-name" name="user-name" placeholder=" " required>
+                        <span class="form-input-errormsg">x Please enter a valid name</span>
+                    </div>
                 </div>
 
                 <div class="form-row">
-                    <label for="user-email">Email
-                        <input type="email" id="user-email" name="user-email" required>
-                    </label>
+                    <div class="form-input">
+                        <label for="user-email">Email</label>
+                        <input type="email" id="user-email" name="user-email" placeholder=" " required>
+                        <span class="form-input-errormsg">x Please enter a valid email</span>
+                    </div>
 
-                    <label for="user-phone">Phone number (optional)
-                        <input type="tel" id="user-phone" name="user-phone">
-                    </label>
+                    <div class="form-input">
+                        <label for="user-phone">Phone number (optional)</label>
+                        <input type="tel" id="user-phone" name="user-phone" placeholder=" ">
+                        <span class="form-input-errormsg">x Please enter a valid phone number</span>
+                    </div>
                 </div>
 
                 <div class="form-row">
-                    <label for="user-password">Password
-                        <input type="password" id="user-password" name="user-password" required>
-                    </label>
-
-                    <label for="user-password-confirm">Confirm password
-                        <input type="password" id="user-password-confirm" name="user-password-confirm" required>
-                    </label>
+                    <div class="form-input">
+                        <label for="user-password">Password</label>
+                        <input type="password" id="user-password" name="user-password" placeholder=" " required>
+                        <span class="form-input-errormsg">x Please enter a valid password</span>
+                    </div>
+                    
+                    <div class="form-input">
+                        <label for="user-password-confirm">Confirm password</label>
+                        <input type="password" id="user-password-confirm" name="user-password-confirm" placeholder=" " required>
+                        <span class="form-input-errormsg">x Passwords don't match</span>
+                    </div>
                 </div>
             </fieldset>
 
