@@ -9,6 +9,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Merienda&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./styles.css">
+    <script src="./script.js" defer></script>
 </head>
 
 <body>
@@ -51,7 +52,7 @@
 
                     <div class="form-input">
                         <label for="user-phone">Phone number (optional)</label>
-                        <input type="tel" id="user-phone" name="user-phone" placeholder=" ">
+                        <input type="tel" id="user-phone" name="user-phone" placeholder=" " pattern="(\+\d(-)?(\d)?(\d)?(\d)?)?\d{9}\d*">
                         <span class="form-input-errormsg">x Please enter a valid phone number</span>
                     </div>
                 </div>
@@ -59,14 +60,17 @@
                 <div class="form-row">
                     <div class="form-input">
                         <label for="user-password">Password</label>
-                        <input type="password" id="user-password" name="user-password" placeholder=" " required>
-                        <span class="form-input-errormsg">x Please enter a valid password</span>
+                        <input type="password" class="password-error" id="user-password" name="user-password" placeholder=" " minlength="8" required>
+                        <span class="form-password-guideline-invalid" id="password-guideline-1">At least 8 characters long</span>
+                        <span class="form-password-guideline-invalid" id="password-guideline-2">At least 1 uppercase character</span>
+                        <span class="form-password-guideline-invalid" id="password-guideline-3">At least 1 lowercase character</span>
+                        <span class="form-password-guideline-invalid" id="password-guideline-4">At least 1 number</span>
                     </div>
                     
                     <div class="form-input">
                         <label for="user-password-confirm">Confirm password</label>
-                        <input type="password" id="user-password-confirm" name="user-password-confirm" placeholder=" " required>
-                        <span class="form-input-errormsg">x Passwords don't match</span>
+                        <input type="password" class="password-error" id="user-password-confirm" name="user-password-confirm" placeholder=" " required>
+                        <span class="form-passwords-match-false" id="passwords-matchmsg"></span>
                     </div>
                 </div>
             </fieldset>

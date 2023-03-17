@@ -118,7 +118,7 @@ input:focus {
     box-shadow: 4px 4px 4px #ccc;
 }
 
-input:invalid {
+input:invalid, input.password-error {
     border-color: #bc3800;
 }
 
@@ -126,14 +126,37 @@ input, input:placeholder-shown {
     border-color: #333;
 }
 
-input:invalid ~ .form-input-errormsg {
+input:invalid ~ .form-input-errormsg, input ~ .form-password-guideline-invalid, input ~ .form-passwords-match-false {
     display: block;
     color: #bc3800;
     margin-top: 5px;
     font-size: 0.8rem;
 }
 
-input ~ .form-input-errormsg, input:placeholder-shown ~ .form-input-errormsg {
+input ~ .form-password-guideline-invalid::before {
+    content: "x ";
+}
+
+input ~ .form-password-guideline-valid, input ~ .form-passwords-match-true {
+    display: block;
+    color: #0096bc;
+    margin-top: 5px;
+    font-size: 0.8rem;
+}
+
+input ~ .form-password-guideline-valid::before {
+    content: "√ ";
+}
+
+.form-passwords-match-false::before {
+    content: "x Passwords don't match";
+}
+
+.form-passwords-match-true::before {
+    content: "√ Passwords match";
+}
+
+input ~ .form-input-errormsg, input:placeholder-shown ~ .form-input-errormsg, input:placeholder-shown ~ .form-password-guideline-invalid, input:placeholder-shown ~ .form-password-guideline-valid, input:placeholder-shown ~ .form-passwords-match-false, input:placeholder-shown ~ .form-passwords-match-true {
     display: none;
 }
 
